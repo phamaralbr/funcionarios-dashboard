@@ -1,0 +1,22 @@
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--color-light-gray);
+    background-image: url("../assets/decorations/background.svg");
+    background-size: 557px auto;
+    background-repeat: no-repeat;
+    background-position: right -90px bottom -90px;
+    background-attachment: fixed;
+}
+
+.app-layout__conteudo {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+}
+
+@media (max-width: 640px) {
+    .app-layout {
+        flex-direction: column;
+    }
+}

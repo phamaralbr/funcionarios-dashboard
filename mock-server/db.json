@@ -1,0 +1,181 @@
+{
+    "cargos": [
+        {
+            "id": "1",
+            "nome": "Técnico de Segurança do Trabalho"
+        },
+        {
+            "id": "2",
+            "nome": "Engenheiro de Segurança"
+        },
+        {
+            "id": "3",
+            "nome": "Auxiliar Administrativo"
+        },
+        {
+            "id": "4",
+            "nome": "Analista de RH"
+        },
+        {
+            "id": "5",
+            "nome": "Supervisor de Operações"
+        }
+    ],
+    "atividades": [
+        {
+            "id": "1",
+            "nome": "Solda"
+        },
+        {
+            "id": "2",
+            "nome": "Trabalho em altura"
+        },
+        {
+            "id": "3",
+            "nome": "Operação de máquinas"
+        },
+        {
+            "id": "4",
+            "nome": "Manuseio de produtos químicos"
+        },
+        {
+            "id": "5",
+            "nome": "Limpeza industrial"
+        }
+    ],
+    "epis": [
+        {
+            "id": "1",
+            "nome": "Capacete de Segurança"
+        },
+        {
+            "id": "2",
+            "nome": "Óculos de Proteção"
+        },
+        {
+            "id": "3",
+            "nome": "Luva de Raspa"
+        },
+        {
+            "id": "4",
+            "nome": "Calçado de Segurança"
+        },
+        {
+            "id": "5",
+            "nome": "Protetor Auricular"
+        },
+        {
+            "id": "6",
+            "nome": "Cinto de Segurança"
+        },
+        {
+            "id": "7",
+            "nome": "Máscara Respiratória"
+        }
+    ],
+    "funcionarios": [
+        {
+            "id": "3",
+            "nomeCompleto": "Carlos Eduardo Pereira Lima",
+            "sexo": "masculino",
+            "cpf": "054.382.811-57",
+            "dataNascimento": "1979-06-02",
+            "rg": "34.567.890-1",
+            "cargoId": "3",
+            "status": "inativo",
+            "naoUsaEpi": true,
+            "atividadesDetalhadas": []
+        },
+        {
+            "id": "5",
+            "nomeCompleto": "Rafael Henrique Martins",
+            "sexo": "masculino",
+            "cpf": "222.333.444-55",
+            "dataNascimento": "1985-09-17",
+            "rg": "56.789.012-3",
+            "cargoId": "5",
+            "status": "ativo",
+            "naoUsaEpi": false,
+            "atividadesDetalhadas": [
+                {
+                    "id": "1",
+                    "atividadeId": "1",
+                    "epis": [
+                        {
+                            "id": "1",
+                            "numeroCA": "9981",
+                            "epiId": "7"
+                        },
+                        {
+                            "id": "2",
+                            "numeroCA": "3321",
+                            "epiId": "3"
+                        }
+                    ]
+                }
+            ],
+            "atestadoSaude": "laudo_rafael.pdf"
+        },
+        {
+            "id": "6",
+            "nomeCompleto": "Beatriz Nunes Ferreira",
+            "sexo": "feminino",
+            "cpf": "333.444.555-66",
+            "dataNascimento": "1992-03-08",
+            "rg": "67.890.123-4",
+            "cargoId": "1",
+            "status": "inativo",
+            "naoUsaEpi": false,
+            "atividadesDetalhadas": [
+                {
+                    "id": "1",
+                    "atividadeId": "4",
+                    "epis": [
+                        {
+                            "id": "1",
+                            "numeroCA": "4471",
+                            "epiId": "7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nomeCompleto": "Teste Azul",
+            "sexo": "feminino",
+            "cpf": "054.382.811-57",
+            "dataNascimento": "1999-10-10",
+            "rg": "678901234",
+            "cargoId": "1",
+            "status": "ativo",
+            "naoUsaEpi": true,
+            "atividadesDetalhadas": [],
+            "id": "V75IjSX"
+        },
+        {
+            "nomeCompleto": "asd asd",
+            "sexo": "feminino",
+            "cpf": "054.382.811-57",
+            "dataNascimento": "2026-09-08",
+            "rg": "3333333",
+            "cargoId": "1",
+            "status": "ativo",
+            "naoUsaEpi": false,
+            "atividadesDetalhadas": [
+                {
+                    "id": "ativ-1789780653126-1",
+                    "atividadeId": "3",
+                    "epis": [
+                        {
+                            "id": "epi-1789780653126-2",
+                            "epiId": "1",
+                            "numeroCA": "1234"
+                        }
+                    ]
+                }
+            ],
+            "id": "3dxMInI",
+            "atestadoSaude": "steam.desktop"
+        }
+    ]
+}

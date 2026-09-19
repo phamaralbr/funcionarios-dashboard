@@ -1,0 +1,118 @@
+.func-item {
+  width: 100%;
+  max-width: 714px;
+  min-height: 92px;
+  border: none;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  transition: box-shadow 0.15s ease;
+}
+
+.func-item--ativo {
+  background: var(--color-primary-20);
+}
+
+.func-item--inativo {
+  background: var(--color-light-gray);
+}
+
+.func-item:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.func-item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) 0 var(--space-4) var(--space-4);
+  flex: 1;
+  min-width: 0;
+}
+
+.func-item__nome {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-dark-gray);
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.func-item__tags {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.func-item__actions-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.func-item__actions {
+  width: 48px;
+  height: 100%;
+  min-height: 92px;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 18px;
+}
+
+.func-item__actions:hover {
+  filter: brightness(0.95);
+}
+
+.func-item__menu {
+  position: absolute;
+  right: 52px;
+  top: 0;
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.func-item__menu button {
+  border: none;
+  background: none;
+  padding: var(--space-3) var(--space-6);
+  text-align: left;
+  font-family: var(--font-ubuntu);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  color: var(--color-medium-gray);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.func-item__menu button:hover {
+  background: var(--color-light-gray);
+}
+
+.func-item__menu button + button {
+  border-top: 1px solid var(--color-medium-light-gray);
+}
+
+@media (max-width: 480px) {
+  .func-item__nome {
+    font-size: var(--font-size-base);
+  }
+
+  .func-item__tags {
+    gap: var(--space-2);
+  }
+}

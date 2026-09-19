@@ -1,0 +1,43 @@
+.resumo-card {
+    width: 100%;
+    max-width: 460px;
+    min-height: 439px;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.resumo-card__info {
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-medium-gray);
+    font-family: var(--font-ubuntu);
+    line-height: var(--line-height-loose);
+}
+
+.resumo-card__photo {
+    align-self: flex-start;
+    width: 142px;
+    height: 159px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--color-light-gray);
+}
+
+.resumo-card__photo .ant-avatar {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    font-size: 48px !important;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .resumo-card {
+        max-width: 100%;
+    }
+}

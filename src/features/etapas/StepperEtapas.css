@@ -1,0 +1,196 @@
+/* Layout replicado do Figma (node 8113:897): colunas de largura FIXA +
+   gaps fixos garantem espaçamento uniforme (ver comentário na versão
+   anterior). Diferença agora: a coluna do item tem a largura EXATA do
+   círculo, não a largura (mais larga) do texto — é isso que faz a linha
+   encostar de verdade no botão. O label, que precisa de mais espaço pra
+   quebrar linha, estoura essa largura via margin negativa, sem alargar
+   a coluna (e portanto sem empurrar a linha para longe do círculo). */
+:root {
+    --stepper-icon-size: 64px;
+    --stepper-icon-radius: 20px;
+    --stepper-item-width: 96px;
+    --stepper-gap: 64px;
+    --stepper-line-weight: 4px;
+}
+
+.stepper {
+    width: 100%;
+    max-width: var(--content-max-width);
+    min-height: 120px;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    /* justify-content: center; */
+    box-shadow: var(--shadow-card);
+    padding: var(--space-5);
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    margin: 0 auto var(--space-6) auto;
+}
+
+.stepper__item-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.stepper__item {
+    /* Largura = tamanho do círculo, não do texto — é o que mantém a coluna
+       flush com a linha conectora. */
+    width: var(--stepper-icon-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-1);
+}
+
+.stepper__circulo {
+    width: var(--stepper-icon-size);
+    height: var(--stepper-icon-size);
+    flex-shrink: 0;
+    border-radius: var(--stepper-icon-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    box-shadow: var(--shadow);
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.stepper__circulo .anticon {
+    font-size: 32px;
+}
+
+.stepper__item--cinza .stepper__circulo {
+    background: var(--color-medium-light-gray);
+    color: var(--color-white);
+}
+
+.stepper__item--azul .stepper__circulo {
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-white);
+}
+
+.stepper__item--azul .stepper__circulo:hover {
+    border-color: var(--color-darker-dark-gray);
+}
+
+/* Estado ativo no Figma: contorno escuro + sombra elevada. Valor exato do
+   efeito "Drop shadow elevated" do arquivo: offset (0,6) blur 8 cor
+   #00000059. */
+.stepper__item--ativa .stepper__circulo {
+    border-color: var(--color-darker-dark-gray);
+    box-shadow: var(--shadow-elevated);
+}
+
+.stepper__label {
+    /* Estoura a largura do círculo via margem negativa simétrica, sem
+       alargar a coluna do item (ver comentário no topo do arquivo). */
+    width: var(--stepper-item-width);
+    margin: 0 calc((var(--stepper-icon-size) - var(--stepper-item-width)) / 2);
+    font-family: var(--font-ubuntu);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    line-height: 1.2;
+    color: var(--color-medium-gray);
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.stepper__item--azul .stepper__label {
+    color: var(--color-primary);
+}
+
+/* Linha conectora: cor azul fixa, peso 4, traço 8 / vão 8 — sem variação
+   por progresso. Largura FIXA (mesmo valor do gap do design) e coluna do
+   item do tamanho exato do círculo é o que faz ela encostar nos botões
+   dos dois lados, sem sobra de espaço em nenhuma ponta. */
+.stepper__linha {
+    width: var(--stepper-gap);
+    flex-shrink: 0;
+    height: var(--stepper-line-weight);
+    margin-top: calc(
+        var(--space-1) + (var(--stepper-icon-size) / 2) -
+            (var(--stepper-line-weight) / 2)
+    );
+    background-image: repeating-linear-gradient(
+        to right,
+        var(--color-primary) 0 8px,
+        transparent 8px 16px
+    );
+    background-position: calc(50% - 4px);
+}
+
+.stepper__item:disabled {
+    cursor: not-allowed;
+}
+
+.stepper__concluido {
+    width: var(--stepper-item-width);
+    margin: 0 calc((var(--stepper-icon-size) - var(--stepper-item-width)) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-dark);
+    white-space: nowrap;
+    font-family: var(--font-ubuntu);
+}
+
+.stepper__concluido .anticon {
+    font-size: 10px;
+}
+
+@media (max-width: 1024px) {
+    .stepper {
+        padding: var(--space-4);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --stepper-icon-size: 48px;
+        --stepper-icon-radius: 12px;
+        --stepper-item-width: 80px;
+        --stepper-gap: 24px;
+    }
+
+    .stepper {
+        padding: var(--space-4) var(--space-3);
+    }
+
+    .stepper__label {
+        font-size: var(--font-size-xs);
+    }
+
+    .stepper__concluido {
+        font-size: var(--font-size-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --stepper-icon-size: 40px;
+        --stepper-icon-radius: 10px;
+        --stepper-item-width: 64px;
+        --stepper-gap: 12px;
+    }
+
+    .stepper__concluido {
+        display: none;
+    }
+}

@@ -1,0 +1,250 @@
+.func-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+    min-width: 0;
+}
+
+.func-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+    padding: var(--space-3);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-section);
+    background: var(--color-white);
+    box-sizing: border-box;
+}
+
+.func-form__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.func-form__label {
+    font-family: var(--font-roboto);
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.func-form__label--inline {
+    min-width: 0;
+    flex: 1 1 220px;
+}
+
+/* Grid de campos (Nome/Sexo, CPF/Data, RG/Cargo) — fluido via auto-fit */
+.func-form__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    width: 100%;
+    min-width: 0;
+}
+
+.func-form__grid-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-5) var(--space-6);
+    align-items: start;
+    width: 100%;
+    min-width: 0;
+}
+
+.func-form__field {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 0 !important;
+}
+
+.func-form__field--full {
+    width: 100%;
+}
+
+/* ---- Reskin dos controles do Ant Design ---- */
+
+.func-form .ant-form-item-label > label {
+    font-family: var(--font-roboto);
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+    height: auto;
+}
+
+.func-form .ant-form-item-explain-error {
+    font-family: var(--font-roboto);
+    font-size: 12px;
+    color: var(--color-danger);
+}
+
+.func-form .ant-input,
+.func-form .ant-picker,
+.func-form .ant-select {
+    border: 1px solid var(--color-primary) !important;
+    border-radius: var(--radius-sm) !important;
+    font-family: var(--font-roboto);
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+}
+
+.func-form .ant-input,
+.func-form .ant-picker {
+    min-height: 36px;
+    padding: 0 var(--space-3);
+}
+
+.func-form .ant-select {
+    min-height: 36px !important;
+    display: flex;
+    align-items: center;
+}
+
+.func-form .ant-input:focus,
+.func-form .ant-input:focus-within,
+.func-form .ant-picker-focused,
+.func-form .ant-select-focused .ant-select {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 2px var(--color-primary-20) !important;
+}
+
+.func-form .ant-upload-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-5);
+}
+
+.func-form__upload.upload-empty {
+    gap: 0;
+}
+
+.func-form__upload .ant-upload-list-item {
+    border: 1px solid var(--color-primary);
+    height: 36px !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 0px 10px;
+}
+
+.func-form__upload .ant-upload-list-item:hover {
+    background: unset !important;
+    /* background: var(--color-primary-20) !important; */
+    border: var(--color-primary-60) 1px solid !important;
+}
+
+.func-form__upload .ant-upload-list-item-action {
+    opacity: 1 !important;
+}
+
+.func-form__input--ca {
+    width: 100%;
+}
+
+.ant-radio {
+    border-color: var(--color-primary) !important;
+}
+
+.func-form .ant-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    padding-top: 6px;
+}
+
+.func-form .ant-radio-wrapper {
+    font-family: var(--font-roboto);
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+}
+
+.func-form .ant-radio-checked .ant-radio-inner {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+.func-form .ant-checkbox {
+    border-radius: 2px;
+    border-color: var(--color-primary);
+}
+
+.func-form .ant-checkbox-wrapper {
+    font-family: var(--font-roboto);
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+    flex-wrap: wrap;
+}
+
+.func-form .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.func-form .ant-switch.ant-switch-checked {
+    background: var(--color-primary);
+}
+
+/* Seção de EPIs */
+.func-form__epi-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+}
+
+.func-form__atividades {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    width: 100%;
+    min-width: 0;
+}
+
+.func-form__atividade-block {
+    gap: var(--space-5);
+}
+
+/* Linha de EPI: EPI / CA / Excluir EPI — auto-fit decide 1, 2 ou 3 colunas */
+.func-form__epi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-4) var(--space-5);
+    align-items: end;
+    width: 100%;
+    min-width: 0;
+}
+
+.func-form .btn.func-form__btn-submit {
+    margin-top: var(--space-2);
+}
+
+.func-form__upload {
+    width: 100%;
+}
+
+.func-form__upload .ant-upload {
+    width: 100%;
+}
+
+.func-form__upload .ant-upload-list {
+    font-family: var(--font-roboto);
+    font-size: var(--font-size-sm);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .func-form__grid-row {
+        flex-wrap: wrap;
+    }
+
+    .func-form__epi-row {
+        grid-template-columns: 1fr;
+    }
+}

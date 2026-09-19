@@ -1,0 +1,230 @@
+:root {
+    /* Colors (extraídos do Figma) */
+    --color-primary: #649fbf;
+    --color-primary-20: rgba(100, 159, 191, 0.2);
+    --color-primary-60: rgba(100, 159, 191, 0.6);
+    --color-white: #ffffff;
+    --color-white-80: rgba(255, 255, 255, 0.8);
+    --color-light-gray: #f2f2f2;
+    --color-medium-light-gray: #dbdbdb;
+    --color-medium-gray: #959595;
+    --color-dark-gray: #707070;
+    --color-darker-dark-gray: #3a3a3a;
+    --color-dark: #272f33;
+    --color-danger: #c0392b;
+
+    /* Typography */
+    --font-ubuntu: "Ubuntu", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-roboto: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 24px;
+    --font-size-xl: 28px;
+
+    --line-height-loose: 1.222;
+    --letter-spacing-h6: 0.48px;
+
+    /* Spacing scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-lg: 20px;
+    --radius-xl: 24px;
+    --radius-pill: 36px;
+    --radius-switch: 11px;
+
+    /* Shadows */
+    --shadow-card: 0 2px 23px rgba(0, 0, 0, 0.05);
+    --shadow-section: 0 4px 4px rgba(0, 0, 0, 0.15);
+    --shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    --shadow-elevated: 0 6px 8px rgba(0, 0, 0, 0.35);
+
+    /* Layout */
+    --sidebar-width: 56px;
+    --sidebar-height: 768px;
+    --content-max-width: 1254px;
+    --content-padding-x: 88px;
+    --content-padding-top: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body {
+    font-family: var(--font-ubuntu);
+    -webkit-font-smoothing: antialiased;
+    background: var(--color-light-gray);
+    color: var(--color-darker-dark-gray);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+.btn {
+    font-family: var(--font-ubuntu);
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-6);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Estados desabilitados com cores sólidas e opacas — usar `opacity` aqui
+   esmaece o próprio background do botão, deixando o que está atrás dele
+   visível "por baixo" (era o bug relatado: "dá pra ver o fundo através
+   deles"). Cada variante recebe cores diretas em vez de opacity. */
+.btn--outline:disabled,
+.btn--outline-muted:disabled,
+.btn--prev:disabled {
+    background: var(--color-light-gray);
+    color: var(--color-medium-gray);
+    border-color: var(--color-medium-light-gray);
+}
+
+.btn--add:disabled {
+    background: var(--color-light-gray);
+    color: var(--color-medium-gray);
+    border-color: var(--color-medium-light-gray);
+}
+
+.btn--add {
+    width: 100%;
+    height: 66px;
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+}
+
+/* .btn--add:hover {
+    border-color: var(--color-primary-60) !important;
+} */
+
+.btn--outline {
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    min-height: 36px;
+}
+
+/* .btn--outline:hover,
+.btn--outline[aria-pressed="true"] {
+    border-color: var(--color-primary-60) !important;
+} */
+
+.btn--outline-muted {
+    background: var(--color-white);
+    border: 1px solid var(--color-medium-gray);
+    color: var(--color-medium-gray);
+    min-width: 192px;
+}
+
+.btn--outline-muted:hover {
+    background: var(--color-light-gray);
+}
+
+.btn--next {
+    background: var(--color-medium-gray);
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+    font-weight: 700;
+    padding: var(--space-2) var(--space-6);
+    min-width: 194px;
+}
+
+.btn--next:not(:disabled) {
+    background: var(--color-primary);
+}
+
+.btn--next:not(:disabled):hover {
+    filter: brightness(0.95);
+}
+
+.btn--prev {
+    background: var(--color-white);
+    border: 1px solid var(--color-medium-gray);
+    color: var(--color-darker-dark-gray);
+    font-family: var(--font-roboto);
+    font-weight: 700;
+    min-width: 194px;
+}
+
+.btn--prev:hover:not(:disabled) {
+    background: var(--color-light-gray);
+}
+
+/* =========================================================
+   TAG PILL
+========================================================= */
+.tag {
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    padding: var(--space-1) var(--space-4);
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* =========================================================
+   SWITCH (toggle) — tema do Switch do Ant Design
+========================================================= */
+.custom-switch.ant-switch-checked {
+    background: var(--color-medium-light-gray) !important;
+}
+
+.custom-switch.ant-switch {
+    background: var(--color-medium-light-gray) !important;
+}
+
+.custom-switch .ant-switch-inner .ant-switch-inner-checked {
+    color: var(--color-darker-dark-gray);
+    font-weight: 300;
+    font-size: var(--font-size-xs);
+}
+
+.custom-switch .ant-switch-inner .ant-switch-inner-unchecked {
+    color: var(--color-darker-dark-gray);
+    font-weight: 300;
+    font-size: var(--font-size-xs);
+}
