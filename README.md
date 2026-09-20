@@ -63,7 +63,7 @@ chmod +x gradlew
 ### Deploy
 
 ```bash
-cd client-extensions/funcionarios-dashboard-ce
+cd client-extensions/funcionarios-liferay-widget
 ../../gradlew clean deploy -Ddeploy.docker.container.id=$(docker ps -lq)
 ```
 
