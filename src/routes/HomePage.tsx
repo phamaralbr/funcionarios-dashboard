@@ -56,7 +56,7 @@ export function HomePage() {
                 {!isPrimeiraEtapa && (
                     <button
                         type="button"
-                        className="btn btn--prev"
+                        className="btn btn--next"
                         onClick={() => dispatch(etapaAnterior())}
                     >
                         Passo anterior

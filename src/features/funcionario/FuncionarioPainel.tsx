@@ -113,7 +113,7 @@ export function FuncionarioPainel() {
                                 </Button>
                                 <Button
                                     // type="button"
-                                    className="btn btn--outline-muted"
+                                    className="btn btn--outline"
                                     onClick={() => dispatch(limparFiltros())}
                                 >
                                     Limpar filtros

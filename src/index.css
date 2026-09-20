@@ -94,6 +94,8 @@ img {
     font-size: var(--font-size-sm);
     border-radius: var(--radius-sm);
     padding: var(--space-3) var(--space-6);
+    min-height: 36px;
+    min-width: 192px;
     border: none;
     cursor: pointer;
     display: inline-flex;
@@ -145,20 +147,26 @@ img {
     background: var(--color-white);
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
-    min-height: 36px;
+    /* min-height: 36px; */
 }
 
-/* .btn--outline:hover,
+/* .btn--outline:active,
 .btn--outline[aria-pressed="true"] {
-    border-color: var(--color-primary-60) !important;
+    border-color: var(--color-medium-gray) !important;
 } */
 
-.btn--outline-muted {
+.btn--outline:active,
+.btn--outline[aria-pressed="true"] {
     background: var(--color-white);
     border: 1px solid var(--color-medium-gray);
     color: var(--color-medium-gray);
-    min-width: 192px;
 }
+
+/* .btn--outline-muted {
+    background: var(--color-white);
+    border: 1px solid var(--color-medium-gray);
+    color: var(--color-medium-gray);
+} */
 
 .btn--outline-muted:hover {
     background: var(--color-light-gray);
@@ -181,7 +189,7 @@ img {
     filter: brightness(0.95);
 }
 
-.btn--prev {
+/* .btn--prev {
     background: var(--color-white);
     border: 1px solid var(--color-medium-gray);
     color: var(--color-darker-dark-gray);
@@ -192,7 +200,7 @@ img {
 
 .btn--prev:hover:not(:disabled) {
     background: var(--color-light-gray);
-}
+} */
 
 /* =========================================================
    TAG PILL

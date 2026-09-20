@@ -123,9 +123,9 @@
         gap: var(--space-3);
     }
 
-    .painel-card__filtros-botoes .btn--outline-muted {
+    /* .painel-card__filtros-botoes .btn--outline-muted {
         min-width: 0;
-    }
+    } */
 
     .painel-card__contagem {
         text-align: right;

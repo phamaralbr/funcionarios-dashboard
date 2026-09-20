@@ -50,6 +50,7 @@
     color: var(--color-primary);
 }
 
+.sidebar__item:hover::before,
 .sidebar__item--active::before {
     content: "";
     position: absolute;
