@@ -151,31 +151,6 @@
             "naoUsaEpi": true,
             "atividadesDetalhadas": [],
             "id": "V75IjSX"
-        },
-        {
-            "nomeCompleto": "asd asd",
-            "sexo": "feminino",
-            "cpf": "054.382.811-57",
-            "dataNascimento": "2026-09-08",
-            "rg": "3333333",
-            "cargoId": "1",
-            "status": "ativo",
-            "naoUsaEpi": false,
-            "atividadesDetalhadas": [
-                {
-                    "id": "ativ-1789780653126-1",
-                    "atividadeId": "3",
-                    "epis": [
-                        {
-                            "id": "epi-1789780653126-2",
-                            "epiId": "1",
-                            "numeroCA": "1234"
-                        }
-                    ]
-                }
-            ],
-            "id": "3dxMInI",
-            "atestadoSaude": "steam.desktop"
         }
     ]
 }

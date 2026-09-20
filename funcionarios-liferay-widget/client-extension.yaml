@@ -1,0 +1,16 @@
+funcionarios-dashboard-ce:
+   cssURLs:
+      - style.css
+   friendlyURLMapping: funcionarios-dashboard
+   htmlElementName: funcionarios-dashboard
+   instanceable: false
+   name: Funcionarios Dashboard
+   portletCategoryName: category.client-extensions
+   type: customElement
+   urls:
+      - index.js
+   useESM: false
+
+assemble:
+   - from: assets
+     into: static

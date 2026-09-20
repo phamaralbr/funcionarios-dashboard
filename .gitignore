@@ -2,3 +2,7 @@ node_modules
 dist
 .env
 *.log
+
+# Liferay build artifacts
+dist-ce/
+funcionarios-liferay-widget/assets/

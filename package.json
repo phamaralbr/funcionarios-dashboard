@@ -6,12 +6,14 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
+        "build:ce": "tsc -b && vite build --config vite.config.ce.ts && cp dist-ce/index.js dist-ce/style.css funcionarios-liferay-widget/assets/",
         "lint": "oxlint",
         "preview": "vite preview",
         "mock-server": "json-server --watch mock-server/db.json --port 3001",
         "start": "concurrently -n WEB,API -c blue,green \"npm run dev\" \"npm run mock-server\""
     },
     "dependencies": {
+        "@ant-design/cssinjs": "^2.1.2",
         "@ant-design/icons": "^6.3.4",
         "@reduxjs/toolkit": "^2.12.0",
         "antd": "^6.6.4",

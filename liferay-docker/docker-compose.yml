@@ -1,0 +1,9 @@
+services:
+    liferay:
+        image: liferay/portal:7.4.3.132-ga132
+        container_name: liferay
+        ports:
+            - "8080:8080"
+        mem_limit: 8g
+        environment:
+            TZ: America/Sao_Paulo
