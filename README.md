@@ -1,6 +1,8 @@
 # Desafio Frontend
 
-Implementação do desafio prático de recrutamento - página de gestão de etapas e funcionários.
+Implementação do desafio prático de recrutamento - página de gestão de etapas e funcionários a partir de protótipo Figma.
+
+![project preview](./preview.png)
 
 ## Stack
 
