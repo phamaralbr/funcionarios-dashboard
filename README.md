@@ -37,7 +37,7 @@ Implementação do desafio prático de recrutamento - página de gestão de etap
 
 ## Integração com Liferay
 
-![liferay preview](./preview.png)
+![liferay preview](./preview-liferay.png)
 
 ### Build
 
