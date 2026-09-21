@@ -43,6 +43,12 @@
     box-shadow: none;
 }
 
+.exclusao-modal__ok:hover {
+    border: none !important;
+    background: none !important;
+    color: var(--color-primary) !important;
+}
+
 .exclusao-modal__fechar {
     position: absolute;
     top: 22px;

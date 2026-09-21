@@ -48,6 +48,14 @@ function validarCPF(cpf: string): boolean {
     );
 }
 
+// aqui normalizamos formato (maiúsculas, sem pontuação)
+function normalizarRG(valor: string): string {
+    return valor
+        .toUpperCase()
+        .replace(/[^0-9A-Z]/g, "")
+        .slice(0, 20);
+}
+
 function mascararCPF(valor: string): string {
     const numeros = valor.replace(/\D/g, "").slice(0, 11);
     return numeros
@@ -250,9 +258,10 @@ export function FuncionarioForm({ funcionario }: Props) {
                         name="cpf"
                         normalize={mascararCPF}
                         rules={[
+                            { required: true, message: "Informe o CPF" },
                             {
                                 validator: (_, value) =>
-                                    value && validarCPF(value)
+                                    !value || validarCPF(value)
                                         ? Promise.resolve()
                                         : Promise.reject(
                                               new Error("CPF inválido"),
@@ -278,6 +287,9 @@ export function FuncionarioForm({ funcionario }: Props) {
                             style={{ width: "100%" }}
                             format="DD/MM/YYYY"
                             placeholder="Selecione"
+                            disabledDate={(current) =>
+                                current && current.isAfter(dayjs(), "day")
+                            }
                         />
                     </Form.Item>
                 </div>
@@ -287,9 +299,16 @@ export function FuncionarioForm({ funcionario }: Props) {
                         className="func-form__field"
                         label="RG"
                         name="rg"
-                        rules={[{ required: true, message: "Informe o RG" }]}
+                        normalize={normalizarRG}
+                        rules={[
+                            { required: true, message: "Informe o RG" },
+                            {
+                                min: 4,
+                                message: "RG muito curto",
+                            },
+                        ]}
                     >
-                        <Input placeholder="00.000.000-0" />
+                        <Input placeholder="000000000" maxLength={20} />
                     </Form.Item>
 
                     <Form.Item
@@ -424,11 +443,20 @@ export function FuncionarioForm({ funcionario }: Props) {
                                                                                 message:
                                                                                     "Informe o CA",
                                                                             },
+                                                                            {
+                                                                                pattern:
+                                                                                    /^\d+$/,
+                                                                                message:
+                                                                                    "O CA deve conter apenas números",
+                                                                            },
                                                                         ]}
                                                                     >
                                                                         <Input
                                                                             className="func-form__input--ca"
                                                                             placeholder="0000"
+                                                                            maxLength={
+                                                                                6
+                                                                            }
                                                                         />
                                                                     </Form.Item>
 

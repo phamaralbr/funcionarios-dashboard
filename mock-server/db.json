@@ -1,156 +1,186 @@
 {
-    "cargos": [
+  "cargos": [
+    {
+      "id": "1",
+      "nome": "Técnico de Segurança do Trabalho"
+    },
+    {
+      "id": "2",
+      "nome": "Engenheiro de Segurança"
+    },
+    {
+      "id": "3",
+      "nome": "Auxiliar Administrativo"
+    },
+    {
+      "id": "4",
+      "nome": "Analista de RH"
+    },
+    {
+      "id": "5",
+      "nome": "Supervisor de Operações"
+    }
+  ],
+  "atividades": [
+    {
+      "id": "1",
+      "nome": "Solda"
+    },
+    {
+      "id": "2",
+      "nome": "Trabalho em altura"
+    },
+    {
+      "id": "3",
+      "nome": "Operação de máquinas"
+    },
+    {
+      "id": "4",
+      "nome": "Manuseio de produtos químicos"
+    },
+    {
+      "id": "5",
+      "nome": "Limpeza industrial"
+    }
+  ],
+  "epis": [
+    {
+      "id": "1",
+      "nome": "Capacete de Segurança"
+    },
+    {
+      "id": "2",
+      "nome": "Óculos de Proteção"
+    },
+    {
+      "id": "3",
+      "nome": "Luva de Raspa"
+    },
+    {
+      "id": "4",
+      "nome": "Calçado de Segurança"
+    },
+    {
+      "id": "5",
+      "nome": "Protetor Auricular"
+    },
+    {
+      "id": "6",
+      "nome": "Cinto de Segurança"
+    },
+    {
+      "id": "7",
+      "nome": "Máscara Respiratória"
+    }
+  ],
+  "funcionarios": [
+    {
+      "id": "7",
+      "nomeCompleto": "Juliana Costa Almeida",
+      "sexo": "feminino",
+      "cpf": "651.856.330-34",
+      "dataNascimento": "1990-11-23",
+      "rg": "789012345",
+      "cargoId": "2",
+      "status": "ativo",
+      "naoUsaEpi": false,
+      "atividadesDetalhadas": [
         {
-            "id": "1",
-            "nome": "Técnico de Segurança do Trabalho"
+          "id": "ativ-1789998785877-6",
+          "atividadeId": "2",
+          "epis": [
+            {
+              "id": "epi-1789998785877-7",
+              "epiId": "6",
+              "numeroCA": "5512"
+            },
+            {
+              "id": "epi-1789998785877-8",
+              "epiId": "1",
+              "numeroCA": "1189"
+            }
+          ]
         },
         {
-            "id": "2",
-            "nome": "Engenheiro de Segurança"
-        },
-        {
-            "id": "3",
-            "nome": "Auxiliar Administrativo"
-        },
-        {
-            "id": "4",
-            "nome": "Analista de RH"
-        },
-        {
-            "id": "5",
-            "nome": "Supervisor de Operações"
+          "id": "ativ-1789998785877-9",
+          "atividadeId": "3",
+          "epis": [
+            {
+              "id": "epi-1789998785877-10",
+              "epiId": "5",
+              "numeroCA": "7734"
+            }
+          ]
         }
-    ],
-    "atividades": [
+      ],
+      "atestadoSaude": "laudo_juliana.pdf"
+    },
+    {
+      "id": "8",
+      "nomeCompleto": "Marcos Vinícius Pereira",
+      "sexo": "masculino",
+      "cpf": "353.809.760-77",
+      "dataNascimento": "1988-06-02",
+      "rg": "890123456",
+      "cargoId": "3",
+      "status": "inativo",
+      "naoUsaEpi": true,
+      "atividadesDetalhadas": []
+    },
+    {
+      "id": "9",
+      "nomeCompleto": "Ana Beatriz Ferreira Lima",
+      "sexo": "feminino",
+      "cpf": "981.180.010-32",
+      "dataNascimento": "1993-03-14",
+      "rg": "901234567",
+      "cargoId": "1",
+      "status": "ativo",
+      "naoUsaEpi": false,
+      "atividadesDetalhadas": [
         {
-            "id": "1",
-            "nome": "Solda"
-        },
-        {
-            "id": "2",
-            "nome": "Trabalho em altura"
-        },
-        {
-            "id": "3",
-            "nome": "Operação de máquinas"
-        },
-        {
-            "id": "4",
-            "nome": "Manuseio de produtos químicos"
-        },
-        {
-            "id": "5",
-            "nome": "Limpeza industrial"
+          "id": "ativ-1789998819638-11",
+          "atividadeId": "1",
+          "epis": [
+            {
+              "id": "epi-1789998819638-12",
+              "epiId": "2",
+              "numeroCA": "4021"
+            },
+            {
+              "id": "epi-1789998819638-13",
+              "epiId": "3",
+              "numeroCA": "3305"
+            }
+          ]
         }
-    ],
-    "epis": [
+      ],
+      "atestadoSaude": "laudo_ana.pdf"
+    },
+    {
+      "id": "10",
+      "nomeCompleto": "Ricardo Alves Nogueira",
+      "sexo": "masculino",
+      "cpf": "530.275.830-00",
+      "dataNascimento": "1985-09-30",
+      "rg": "012345678",
+      "cargoId": "2",
+      "status": "inativo",
+      "naoUsaEpi": false,
+      "atividadesDetalhadas": [
         {
-            "id": "1",
-            "nome": "Capacete de Segurança"
-        },
-        {
-            "id": "2",
-            "nome": "Óculos de Proteção"
-        },
-        {
-            "id": "3",
-            "nome": "Luva de Raspa"
-        },
-        {
-            "id": "4",
-            "nome": "Calçado de Segurança"
-        },
-        {
-            "id": "5",
-            "nome": "Protetor Auricular"
-        },
-        {
-            "id": "6",
-            "nome": "Cinto de Segurança"
-        },
-        {
-            "id": "7",
-            "nome": "Máscara Respiratória"
+          "id": "ativ-1789998830590-14",
+          "atividadeId": "3",
+          "epis": [
+            {
+              "id": "epi-1789998830590-15",
+              "epiId": "4",
+              "numeroCA": "6198"
+            }
+          ]
         }
-    ],
-    "funcionarios": [
-        {
-            "id": "3",
-            "nomeCompleto": "Carlos Eduardo Pereira Lima",
-            "sexo": "masculino",
-            "cpf": "054.382.811-57",
-            "dataNascimento": "1979-06-02",
-            "rg": "34.567.890-1",
-            "cargoId": "3",
-            "status": "inativo",
-            "naoUsaEpi": true,
-            "atividadesDetalhadas": []
-        },
-        {
-            "id": "5",
-            "nomeCompleto": "Rafael Henrique Martins",
-            "sexo": "masculino",
-            "cpf": "222.333.444-55",
-            "dataNascimento": "1985-09-17",
-            "rg": "56.789.012-3",
-            "cargoId": "5",
-            "status": "ativo",
-            "naoUsaEpi": false,
-            "atividadesDetalhadas": [
-                {
-                    "id": "1",
-                    "atividadeId": "1",
-                    "epis": [
-                        {
-                            "id": "1",
-                            "numeroCA": "9981",
-                            "epiId": "7"
-                        },
-                        {
-                            "id": "2",
-                            "numeroCA": "3321",
-                            "epiId": "3"
-                        }
-                    ]
-                }
-            ],
-            "atestadoSaude": "laudo_rafael.pdf"
-        },
-        {
-            "id": "6",
-            "nomeCompleto": "Beatriz Nunes Ferreira",
-            "sexo": "feminino",
-            "cpf": "333.444.555-66",
-            "dataNascimento": "1992-03-08",
-            "rg": "67.890.123-4",
-            "cargoId": "1",
-            "status": "inativo",
-            "naoUsaEpi": false,
-            "atividadesDetalhadas": [
-                {
-                    "id": "1",
-                    "atividadeId": "4",
-                    "epis": [
-                        {
-                            "id": "1",
-                            "numeroCA": "4471",
-                            "epiId": "7"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "nomeCompleto": "Teste Azul",
-            "sexo": "feminino",
-            "cpf": "054.382.811-57",
-            "dataNascimento": "1999-10-10",
-            "rg": "678901234",
-            "cargoId": "1",
-            "status": "ativo",
-            "naoUsaEpi": true,
-            "atividadesDetalhadas": [],
-            "id": "V75IjSX"
-        }
-    ]
+      ],
+      "atestadoSaude": "laudo_ricardo.pdf"
+    }
+  ]
 }
